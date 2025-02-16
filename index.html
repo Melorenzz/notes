@@ -12,22 +12,20 @@
     <aside>
         <h1>Notes</h1>
         <div class="scroll_block">
-            <div class="note">
-                <p class="note_title">Покупки</p>
-                <p class="note_date">February 9</p>
-            </div>
+
         </div>
-        <button id="createNewNote">+ New Note</button>
+        <button class="" id="createNewNote">+ New Note</button>
     </aside>
     <main>
-        <input type="text" id="noteTitle" placeholder="Enter note title..." />
+        <input type="text" placeholder="Enter note title..." />
         <textarea id="noteContent" placeholder="Write your note..."></textarea>
     </main>
     <div class="creating_note-container">
         <div class="creating_note">
             <img id="closeBtn" src="./img/cross-round-svgrepo-com.svg" alt="">
             <p>Enter a title for the note</p>
-            <input type="text">
+            <input placeholder="Enter note title..." id="newNoteTitle" type="text">
+            <button id="popupCreateNote">Create</button>
         </div>
     </div>
     <script src="script.js"></script>

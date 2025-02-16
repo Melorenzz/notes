@@ -161,3 +161,14 @@ textarea {
     height: 100%;
     background: rgba(0, 0, 0, 0.43);
 }
+.creating_note button{
+    height: 40px;
+    width: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(255, 166, 0);
+    color: white;
+    font-size: 16px;
+    border-radius: 3px;
+}
