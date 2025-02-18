@@ -38,15 +38,24 @@ popupCreateNote.addEventListener("click", (e) => {
         const note_title = document.createElement('p')
         note_title.classList.add('note_title');
         note_title.id = 'noteTitle';
-
+        const deleteImg = document.createElement('img');
+        deleteImg.src = './img/icons8-trash.svg'
+        deleteImg.classList.add('delete_img');
         const note_date = document.createElement('p')
         note_date.classList.add('note_date');
 
+        note.appendChild(deleteImg);
         note.appendChild(note_title);
         note.appendChild(note_date);
         document.querySelector('.scroll_block').appendChild(note);
         ////////////////////////////////////
 
+        // Added a button to delete a note
+        deleteImg.addEventListener('click', (e) => {
+            note.remove();
+            noteTitleOpen.value = '';
+        })
+        //////////////////////////////////////
 
         // Added the month and day when note was created
         const months = [
