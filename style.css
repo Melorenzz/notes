@@ -176,6 +176,7 @@ textarea {
 }
 .delete_img{
     position: absolute;
+    cursor: pointer;
     right: 10px;
     width: 20px;
     top: 50%;

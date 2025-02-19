@@ -7,11 +7,15 @@ let noteTitleOpen = document.getElementById("noteTitleOpen");
 let popup = document.querySelector('.creating_note-container');
 let notes = [];
 
+// Auto-display popup when no elements are present
+setInterval(() => {
+    if((document.querySelector('.scroll_block')).childElementCount < 1){
+        popup.style.display = 'flex'
+        closeBtn.style.display = 'none';
+    }
 
-if((document.querySelector('.scroll_block')).hasChildNodes()){
-    popup.style.display = 'flex'
-    closeBtn.style.display = 'none';
-}
+})
+//////////////////////////////////////////////////////
 
 createNewNote.addEventListener("click", (e) => {
     popup.style.display = 'flex'
