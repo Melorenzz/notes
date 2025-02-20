@@ -17,17 +17,17 @@ setInterval(() => {
 })
 //////////////////////////////////////////////////////
 
-createNewNote.addEventListener("click", (e) => {
+createNewNote.addEventListener("click", () => {
     popup.style.display = 'flex'
     closeBtn.style.display = 'flex';
 
 })
-closeBtn.addEventListener("click", (e) => {
+closeBtn.addEventListener("click", () => {
     popup.style.display = 'none'
 })
 
 
-popupCreateNote.addEventListener("click", (e) => {
+popupCreateNote.addEventListener("click", () => {
 
     if((newNoteTitle.value).length < 1){
         newNoteTitle.style.border = '2px solid red'
@@ -55,7 +55,7 @@ popupCreateNote.addEventListener("click", (e) => {
         ////////////////////////////////////
 
         // Added a button to delete a note
-        deleteImg.addEventListener('click', (e) => {
+        deleteImg.addEventListener('click', () => {
             note.remove();
             noteTitleOpen.value = '';
         })
@@ -72,7 +72,7 @@ popupCreateNote.addEventListener("click", (e) => {
         note_title.innerHTML = newNoteTitle.value;
         noteTitleOpen.value = newNoteTitle.value;
 
-        noteTitleOpen.addEventListener('input', (e) => {
+        noteTitleOpen.addEventListener('input', () => {
             note_title.innerHTML = noteTitleOpen.value;
         })
         ///////////////////////////////////////
@@ -93,7 +93,21 @@ popupCreateNote.addEventListener("click", (e) => {
 
         popup.style.display = 'none'
         ///////////////////////////////
+
+
+        // Added a function for note switching
+        note.addEventListener('click', () => {
+
+            let selectedNote = notes.find(n => n.title === note_title.innerHTML);
+            if (selectedNote) {
+                noteTitleOpen.value = selectedNote.title;
+                noteContent.value = selectedNote.content;
+            }
+
+        });
+        ////////////////////////////////////////////
     }
+
 })
 
 
