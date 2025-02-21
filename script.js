@@ -106,6 +106,9 @@ popupCreateNote.addEventListener("click", () => {
 
         });
         ////////////////////////////////////////////
+        //  I need to add a function to save the note content and close the popup when clicking outside of it
+        ////////////////////////////////////////////
+
     }
 
 })
