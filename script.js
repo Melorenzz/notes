@@ -101,7 +101,11 @@ popupCreateNote.addEventListener("click", () => {
             let selectedNote = notes.find(n => n.title === note_title.innerHTML);
             if (selectedNote) {
                 noteTitleOpen.value = selectedNote.title;
-                noteContent.value = selectedNote.content;
+
+                noteContent.addEventListener('input', () => {
+                    selectedNote.content = noteContent.value;
+
+                })
             }
 
         });
