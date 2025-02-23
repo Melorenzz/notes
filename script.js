@@ -5,6 +5,7 @@ let closeBtn = document.getElementById("closeBtn");
 let popupCreateNote = document.getElementById("popupCreateNote");
 let noteTitleOpen = document.getElementById("noteTitleOpen");
 let popup = document.querySelector('.creating_note-container');
+let creatingNote = document.getElementById("creatingNote");
 let notes = [];
 
 // Auto-display popup when no elements are present
@@ -26,7 +27,13 @@ closeBtn.addEventListener("click", () => {
     popup.style.display = 'none'
 })
 
+popup.addEventListener('click', (e) => {
+    popup.style.display = 'none'
 
+})
+creatingNote.addEventListener("click", (e) => {
+    e.stopPropagation();
+})
 popupCreateNote.addEventListener("click", () => {
 
     if((newNoteTitle.value).length < 1){
@@ -110,7 +117,7 @@ popupCreateNote.addEventListener("click", () => {
 
         });
         ////////////////////////////////////////////
-        //  I need to add a function to save the note content and close the popup when clicking outside of it
+        //  I need to add a function to save the note content
         ////////////////////////////////////////////
 
     }
