@@ -26,6 +26,7 @@ createNewNote.addEventListener("click", () => {
 closeBtn.addEventListener("click", () => {
     popup.style.display = 'none'
 })
+// Added a function to closing the popup when clicking outside of it
 
 popup.addEventListener('click', (e) => {
     popup.style.display = 'none'
@@ -34,6 +35,8 @@ popup.addEventListener('click', (e) => {
 creatingNote.addEventListener("click", (e) => {
     e.stopPropagation();
 })
+
+////////////////////////////////////////////////////////////////////
 popupCreateNote.addEventListener("click", () => {
 
     if((newNoteTitle.value).length < 1){
@@ -118,13 +121,10 @@ popupCreateNote.addEventListener("click", () => {
         });
         ////////////////////////////////////////////
         //  I need to add a function to save the note content
+        // I haven't figured out how to make the content save and display correctly yet. Right now, I have one idea, but I need some time to think about how to implement it properly and whether it will work at all.
         ////////////////////////////////////////////
 
     }
 
 })
-
-
-
-
 
